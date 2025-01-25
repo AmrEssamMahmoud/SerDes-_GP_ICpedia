@@ -19,6 +19,15 @@ package sequence_item_piso;
         constraint Assert_reset_less_often {
                     Reset dist {1:=98 ,0:=2};
         } 
+        constraint random_bit_patterns {
+            parallel_in dist {
+            10'b0000000000 :/ 10, 
+            10'b1111111111 :/ 10,  
+            10'b1010101010 :/ 10,  
+            10'b0101010101 :/ 10,  
+            [10'b0000000001 : 10'b1111111110] :/ 60
+       };
+}
         //*******************************//
         // TODO: Define Covergroups Here //
         //*******************************//
