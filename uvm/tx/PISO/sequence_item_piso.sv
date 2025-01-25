@@ -16,7 +16,9 @@ package sequence_item_piso;
         //*******************************//
         // TODO: Define Constraints Here //
         //*******************************//
-
+        constraint Assert_reset_less_often {
+                    Reset dist {1:=98 ,0:=2};
+        } 
         //*******************************//
         // TODO: Define Covergroups Here //
         //*******************************//
